@@ -10,67 +10,166 @@
 </head>
 
 <style>
+
    :root {
       --white: #FFFFFF;
       --black: #000000;
+      --black-translucid: rgba(0,0,0,0.5);
+      --black-translucid: rgba(0,0,0,0.5);
       --dark: #232830;
       --light-grey: #C4C4C4;
+      --light-grey-translucid: rgba(196, 196, 196, 0.7);
       --light-yellow: #E5E5E5;
       --red-zomato: #CB202D;
       --text-input-field: #F7F7F7;
       --light-green: #72CB53;
       --middle-green: #4AB425;
       --dark-green: #2B7D0F;
-      --sm: 14px;
-      --md: 16px;
-      --lg: 18px;
+      --sm: 15px;
+      --md: 18px;
+      --lg: 20px;
 
    }
 
    body {
-      font-family: 'Segoe UI', sans-serif;
+   
       margin: 0;
+      
+      font-family: 'Segoe UI';
+      line-height: 24px;
+      letter-spacing: 0em;  
    }
 
    .login {
       width: 100vw;
       height: 100vh;
       display: grid;
-      place-items: center;
-
+      
+      justify-content: center;
+      align-content: space-between;
       background: linear-gradient(90deg, #CB202D 0%, #EC0C92 145.41%);
 
    }
+   .skip-button {
+      position: absolute;
+      top: 25px;
+      right: 18px;
+      height: 30px;
+      width: 65px;
+      border-radius: 230px;
+      background-color: var(--black-translucid);
+      border: none;
+      font-size: var(--sm);
+      font-weight: 400;
+      color: var(--light-yellow);
+   }
 
-   .skip-button {}
-
+   
    .main-content {
       display: grid;
       justify-content: center;
+      align-content: end;
+      margin-bottom: 15px;
+   
    }
+   .primary-button{
+      height: 59px;
+      width: calc(100vw - 40px);
+      border-width: 0;
+      border-radius: 7px;
+      margin-bottom:15px;
+      padding: 0;
+      font-size: var(--md);
+      
+   }
+   .input-phoneNumber{
+      height: 55px;
+      padding: 0;
+      width: calc(100vw - 44px);
+      border-width: 2px;
+      border-color: var(--light-grey-translucid);
+      background-color: var(--white);
+      font-size: var(--lg);
+
+   }
+   .submit-button{
+      background-color: var(--black);
+      color: var(--white);
+      font-size: var(--lg);
+   }
+   .separator, .agreements, .last2-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+   }
+   hr{
+      width: 25%;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      color: var(--light-yellow);
+   }
+   a, p {
+      font-size: var(--sm);
+      color: var(--light-yellow);
+      justify-self: center;
+      
+   }
+   .signin-button{
+      background-color: var(--white);
+   }
+   .last2-buttons{
+      width: calc(100vw - 40px);
+      
+   }
+   .facebookSignin-button{
+      margin-right: 5px;
+   }
+   .googleSignin-button{
+      margin-left: 5px;
+   }
+   .main-content > p {
+      margin-bottom: 0;
+   }
+
+   
+
 </style>
 
 <body>
    <div class="login">
-      <input type="button" value="Skip" class="skip-button">
+      <div class="skip-container">
+
+         <input type="button" value="Skip" class="skip-button">
+      </div>
 
       <div class="main-content">
 
-         <input type="phoneNumber" class="input input-phoneNumber" id="phoneNumber" placeholder="+56 999999999">
+         <input type="phoneNumber" class="input input-phoneNumber primary-button" id="phoneNumber" placeholder="  +56 999999999">
          <input type="submit" value="Send OTP" class="primary-button submit-button">
-         <div class="separator">
-            <div class="line"></div>
-            <p>OR</p>
-            <div class="line"></div>
-         </div>
-         <input type="button" value="" class="primary-button">
-         <input type="button" value="" class="primary-button">
-         <input type="button" value="" class="primary-button">
 
-         <p>By continuing, ypu agree to our</p>
+         <div class="separator">
+            <hr class="line"></hr>
+            <p>OR</p>
+            <hr class="line"></hr>
+         </div>
+
+         <input type="button" value="Continue with Email" class="primary-button emailSignin-button signin-button">
+         <div class="last2-buttons">
+
+            <input type="button" value="Facebook" class="primary-button facebookSignin-button signin-button">
+            <input type="button" value="Google" class="primary-button googleSignin-button signin-button">
+         </div>
+         
+         <p>By continuing, you agree to our</p>
+         <div class="agreements">
          <a href="/">Terms of Service</a>
          <a href="/">Privacy Policy</a>
          <a href="/">Content Policy</a>
+         
+
+         </div>
 
 
       </div>
