@@ -10,6 +10,7 @@
 </head>
 
 <style>
+   
 
    :root {
       --white: #FFFFFF;
@@ -30,12 +31,15 @@
       --lg: 20px;
 
    }
+   input{
+      font-family: 'Segoe UI';
+      font-style: normal;
+   }
 
    body {
-   
-      margin: 0;
-      
       font-family: 'Segoe UI';
+      font-style: normal;
+      margin: 0;      
       line-height: 24px;
       letter-spacing: 0em;  
    }
@@ -44,12 +48,14 @@
       width: 100vw;
       height: 100vh;
       display: grid;
-      
       justify-content: center;
       align-content: space-between;
       background: linear-gradient(90deg, #CB202D 0%, #EC0C92 145.41%);
+      font-family: 'Segoe UI';
+      font-style: normal;
 
    }
+ 
    .skip-button {
       position: absolute;
       top: 25px;
@@ -62,6 +68,7 @@
       font-size: var(--sm);
       font-weight: 400;
       color: var(--light-yellow);
+      
    }
 
    
@@ -70,6 +77,7 @@
       justify-content: center;
       align-content: end;
       margin-bottom: 15px;
+      
    
    }
    .primary-button{
@@ -96,6 +104,7 @@
       background-color: var(--black);
       color: var(--white);
       font-size: var(--lg);
+      
    }
    .separator, .agreements, .last2-buttons {
       display: flex;
@@ -120,8 +129,7 @@
       background-color: var(--white);
    }
    .last2-buttons{
-      width: calc(100vw - 40px);
-      
+      width: calc(100vw - 40px);      
    }
    .facebookSignin-button{
       margin-right: 5px;
@@ -132,6 +140,26 @@
    .main-content > p {
       margin-bottom: 0;
    }
+   .emailSignin-button{
+      background: url(https://cdn-icons-png.flaticon.com/512/2099/2099199.png) no-repeat;
+      background-position: 20px 50%;
+      background-size: 35px ;
+      background-color: var(--white);  
+   }
+   .facebookSignin-button{
+      background: url(https://cdn-icons-png.flaticon.com/512/2175/2175193.png) no-repeat;
+      background-position:18px 50%;
+      background-size: 28px ;
+      background-color: var(--white);  
+   }
+   .googleSignin-button{
+      background: url(https://cdn-icons-png.flaticon.com/512/281/281764.png) no-repeat;
+      background-position:18px 50%;
+      background-size: 28px ;
+      background-color: var(--white);  
+   }
+
+
 
    
 
@@ -156,10 +184,12 @@
          </div>
 
          <input type="button" value="Continue with Email" class="primary-button emailSignin-button signin-button">
+
          <div class="last2-buttons">
 
-            <input type="button" value="Facebook" class="primary-button facebookSignin-button signin-button">
-            <input type="button" value="Google" class="primary-button googleSignin-button signin-button">
+            <input type="button" value="       Facebook" class="primary-button facebookSignin-button signin-button">
+            <input type="button" value="   Google" class="primary-button googleSignin-button signin-button">
+
          </div>
          
          <p>By continuing, you agree to our</p>
