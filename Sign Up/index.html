@@ -98,6 +98,8 @@
       border-color: var(--light-grey-translucid);
       background-color: var(--white);
       font-size: var(--lg);
+      text-align: center;
+      
 
    }
    .submit-button{
@@ -159,6 +161,19 @@
       background-color: var(--white);  
    }
 
+@media (max-width: 350px){
+   a{
+      font-size: 13px;
+   }
+   .emailSignin-button{
+      background-size: 32px;
+   }
+   .facebookSignin-button, .googleSignin-button{
+      background-size: 25px;
+}
+
+}
+
 
 
    
@@ -194,9 +209,9 @@
          
          <p>By continuing, you agree to our</p>
          <div class="agreements">
-         <a href="/">Terms of Service</a>
-         <a href="/">Privacy Policy</a>
-         <a href="/">Content Policy</a>
+            <a href="/">Terms of Service</a>
+            <a href="/">Privacy Policy</a>
+            <a href="/">Content Policy</a>
          
 
          </div>
