@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Verification Code</title>
+</head>
+
+<style>
+   :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --black-translucid: rgba(0, 0, 0, 0.5);
+      --black-translucid: rgba(0, 0, 0, 0.5);
+      --dark: #232830;
+      --light-grey: #C4C4C4;
+      --light-grey-translucid: rgba(196, 196, 196, 0.7);
+      --light-yellow: #E5E5E5;
+      --red-zomato: #CB202D;
+      --text-input-field: #F7F7F7;
+      --light-green: #72CB53;
+      --middle-green: #4AB425;
+      --dark-green: #2B7D0F;
+      --sm: 15px;
+      --md: 18px;
+      --lg: 20px;
+
+   }
+
+   input {
+      font-family: 'Segoe UI';
+      font-style: normal;
+   }
+
+   body {
+      font-family: 'Segoe UI';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      margin: 0;
+      line-height: 24px;
+      letter-spacing: 0em;
+
+    
+   }
+   .verifyCode{
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      align-content: space-between;
+      
+   }
+   .backArrow{
+      position: absolute;
+      height: 35px;
+      width: 35px;
+      top: 16px;
+      left: 11px;
+      border: none;
+      background: url(https://cdn-icons-png.flaticon.com/512/3114/3114931.png) no-repeat;
+      background-position:50% 50%;
+      background-size: 30px ;
+      transform: rotate(180deg)
+     
+   }
+
+   .upperMsg{
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      margin-top: 16px ;
+   }
+   .bottomMsg{
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      margin-bottom: 16px;
+   }
+   p{
+      margin: 3px 0px 3px 0px;
+      font-weight: 400;
+   }
+   .verifyCharacter{
+      box-sizing: border-box;
+      margin: 7px 3px 7px 3px;
+      width: 32px;
+      height: 35px;
+      text-align: center;
+      
+     
+     
+      border: 0.5px solid  #c4c4c4c4;
+      border-radius: 3px;
+   }
+   a{
+      color: var(--light-grey);
+      text-decoration: none;
+   }
+
+   @media (max-width: 350px){
+      .backArrow{
+         left: 5px;
+         background-size: 20px ;
+      }
+   }
+
+
+
+</style>
+<body>
+   
+   <div class="verifyCode">
+      <input type="button" class="backArrow">
+      <div class="upperMsg">
+         <p>We have sent a verification code to</p>
+         <p>+91-90108568965</p>
+
+         <div class="inputCode">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input1">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input2">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input3">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input4">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input5">
+            <input type="text" class="verifyCharacter" maxlength="1" minlength="1" name="input6">
+    
+         </div>
+
+
+      </div>
+      <div class="bottomMsg">
+         <p>0:19</p>
+         <p>Didn't receive the code? <a href="/">Resend now</a></p>
+      </div>
+
+   </div>
+  
+</body>
+</html>
