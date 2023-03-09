@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Café To Go</title>
+   <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+   <h1>Ordenar Café</h1>
+   <form id="coffee-order-form">
+      <label>
+         Seleccione su café:
+         <select id="coffee-select">
+            <option value="espresso">Espresso</option>
+            <option value="latte">Latte</option>
+            <option value="cappuccino">Cappuccino</option>
+         </select>
+      </label>
+      <br>
+      <label>
+         Seleccione su tamaño:
+         <input type="radio" name="size" value="small"> Pequeño
+         <input type="radio" name="size" value="medium"> Mediano
+         <input type="radio" name="size" value="large"> Grande
+      </label>
+      <br>
+      <label>
+         Añadir leche:
+         <input type="checkbox" id="add-milk">
+      </label>
+      <br>
+      <button type="submit">Ordenar</button>
+   </form>
+   <div id="order-status"></div>
+   <script src="./src.js"></script>
+</body>
+
+</html>
